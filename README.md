@@ -32,15 +32,7 @@ This is a **Content-Based Movie Recommender System** built using Python and Stre
 
 ---
 
-## ▶️ Run Locally
-
-Clone the repository:
-
-```bash
-git clone https://github.com/yourusername/movie-recommender-system.git
-cd movie-recommender-system
-
-## 📦 Pickle Files
+### 📦 Pickle Files
 
 The following preprocessed `.pkl` files are included for convenience:
 
@@ -49,5 +41,18 @@ The following preprocessed `.pkl` files are included for convenience:
 - `movie_dict.pkl` — Dictionary used for mapping movie titles
 
 These are required to run the app. You can also regenerate them using the scripts provided.
+
+---
+
+## ▶️ Run Locally
+
+Clone the repository:
+
+```bash
+git clone https://github.com/yourusername/movie-recommender-system.git
+cd movie-recommender-system
+
+
+
 
 
