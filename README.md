@@ -40,3 +40,14 @@ Clone the repository:
 git clone https://github.com/yourusername/movie-recommender-system.git
 cd movie-recommender-system
 
+## 📦 Pickle Files
+
+The following preprocessed `.pkl` files are included for convenience:
+
+- `movies.pkl` — DataFrame of movies with cleaned metadata
+- `similarity.pkl` — Cosine similarity matrix for recommendations
+- `movie_dict.pkl` — Dictionary used for mapping movie titles
+
+These are required to run the app. You can also regenerate them using the scripts provided.
+
+
