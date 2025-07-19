@@ -29,6 +29,7 @@ This is a **Content-Based Movie Recommender System** built using Python and Stre
 - Scikit-learn
 - Streamlit
 - requests (for TMDB API)
+- huggingface_hub
 
 ---
 
@@ -41,6 +42,32 @@ The following preprocessed `.pkl` files are included for convenience:
 - `movie_dict.pkl` — Dictionary used for mapping movie titles
 
 These are required to run the app. You can also regenerate them using the scripts provided.
+
+---
+
+## 📦 Assets Hosted on Hugging Face Hub
+
+To avoid GitHub size limits, the large `.pkl` and `.csv` files are stored on the Hugging Face Hub.
+
+- `similarity.pkl` — Precomputed cosine similarity matrix
+- `tmdb_5000_credits.csv` — Dataset containing movie cast/crew info
+
+These files are automatically downloaded when you run the code using `huggingface_hub`.
+
+---
+
+### 🔧 Code to Download Files
+
+```python
+from huggingface_hub import hf_hub_download
+import pickle, pandas as pd
+
+similarity_path = hf_hub_download("Priyanshu/movie-recommender-assets", "similarity.pkl", repo_type="model")
+with open(similarity_path, "rb") as f:
+    similarity = pickle.load(f)
+
+csv_path = hf_hub_download("Priyanshu/movie-recommender-assets", "tmdb_5000_credits.csv", repo_type="model")
+df = pd.read_csv(csv_path)
 
 ---
 
